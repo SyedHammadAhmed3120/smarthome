@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const credentials = {
+const postCredentials = {
     body: {       
         // Id of the user.
         _id: Joi.string().regex(/^[A-z0-9@._-]+$/).min(3).max(50).required(),
@@ -10,4 +10,6 @@ const credentials = {
     }
 }
 
-module.exports = credentials;
+module.exports = {
+    postCredentialsSchema: postCredentials
+}

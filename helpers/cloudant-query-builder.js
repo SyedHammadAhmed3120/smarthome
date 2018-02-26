@@ -1,5 +1,5 @@
-var restrictedFields = [ 'password', 'saltRounds', 'authToken' ];
 var queryFields = [ 'sort', 'order', 'fields', 'limit', 'skip' ];
+var restrictedFields = [ 'password', 'authToken', 'saltRounds' ];
 var comparingFields = [ '$gt', '$gte', '$lt', '$lte' ];
 
 var limit = function(limit) {
@@ -24,10 +24,6 @@ var where = function(query) {
     var selector = { };
     for(var key in query) {
         if(queryFields.includes(key)) {
-            continue;
-        }
-        
-        if(restrictedFields.includes(key)) {
             continue;
         }
         

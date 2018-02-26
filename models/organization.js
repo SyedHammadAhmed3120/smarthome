@@ -1,6 +1,28 @@
 const Joi = require('joi');
 
-const organization = {
+const getOrganization = {
+    query: {      
+        // Registration date of the organization.
+        created: Joi.string().regex(/^[A-z0-9$:]+$/).optional(),
+        
+        // Properties of user to be returned.
+        fields: Joi.string().optional(),
+        
+        // Number of records to return.
+        limit: Joi.string().optional(),
+        
+        // Number of records to skip.
+        skip: Joi.string().optional(),
+        
+        // Property used to sort the records.
+        sort: Joi.string().optional(),
+        
+        // Order of the sort property.
+        order: Joi.string().optional()
+    }
+}
+
+const postOrganization = {
     body: {
         // Id of the organization.
         _id: Joi.string().regex(/^[A-z0-9_-]+$/).min(3).max(50).required(),
@@ -28,4 +50,7 @@ const organization = {
     }
 }
 
-module.exports = organization;
+module.exports = {
+    postOrganizationSchema: postOrganization,
+    getOrganizationSchema: getOrganization
+}
