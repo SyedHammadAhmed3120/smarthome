@@ -1,0 +1,29 @@
+{
+  "name": "smarthome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "syed hammad ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cloudant": "^1.10.0-NOTICE",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "express-joi-validator": "^2.0.0",
+    "ibmiotf": "^0.2.41",
+    "joi": "^13.1.2",
+    "jsonwebtoken": "^8.1.1",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "request": "^2.83.0",
+    "shortid": "^2.2.8",
+    "swagger-ui-express": "^2.0.15",
+    "uuid": "^3.2.1"
+  }
+}
